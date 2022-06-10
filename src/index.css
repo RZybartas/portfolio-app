@@ -14,4 +14,11 @@
     @apply px-3;
     border-bottom: 1px solid white;
   }
+  span {
+    font-family: 'Open-Sans', sans-serif;
+  }
+
+  span:hover {
+    @apply text-secondary;
+  }
 }
