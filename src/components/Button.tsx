@@ -1,12 +1,14 @@
 export type ButtonProps = {
   text?: string;
   link?: string;
+  type?: 'button' | 'submit';
+  className?: string;
 };
 
-export const Button = ({ text, link }: ButtonProps) => {
+export const Button = ({ text, link, type, className }: ButtonProps) => {
   return (
     <a href={link}>
-      <button className='text-secondary border border-secondary px-6 py-1  text-[16px] rounded-full hover:bg-secondary hover:text-dark'>
+      <button type={type} className={className}>
         {text}
       </button>
     </a>

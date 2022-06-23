@@ -26,8 +26,18 @@ export const Card = ({
       <p className='my-2'>{description}</p>
       <p className='mx-2'>{stack}</p>
       <div className='flex  justify-between items-end mx-4 mt-4 '>
-        <Button text='Code' link={code} />
-        <Button text='Demo' link={demo} />
+        <Button
+          type='button'
+          className='text-secondary border border-secondary px-6 py-1  text-[16px] rounded-full hover:bg-secondary hover:text-dark'
+          text='Code'
+          link={code}
+        />
+        <Button
+          type='button'
+          className='text-secondary border border-secondary px-6 py-1  text-[16px] rounded-full hover:bg-secondary hover:text-dark'
+          text='Demo'
+          link={demo}
+        />
       </div>
     </div>
   );

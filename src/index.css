@@ -24,4 +24,16 @@
   svg {
     @apply mx-3;
   }
+  input,
+  textarea {
+    background-color: #353839;
+    @apply text-primary;
+  }
+  input::placeholder {
+    padding-left: 20px;
+  }
+  textarea::placeholder {
+    padding-top: 10px;
+    padding-left: 20px;
+  }
 }
