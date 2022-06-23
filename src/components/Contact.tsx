@@ -10,10 +10,10 @@ export const Contact = () => {
 
     emailjs
       .sendForm(
-        'service_35f7ofo',
-        'template_1zvyzkw',
+        process.env.REACT_APP_YOUR_SERVICE_ID as string,
+        process.env.REACT_APP_TEMPLATE_ID as string,
         form.current,
-        'zcre5ta3nbgXoO8v7'
+        process.env.REACT_APP_USER_ID as string
       )
       .then(
         (result) => {
