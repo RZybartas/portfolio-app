@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Element } from 'react-scroll';
 import emailjs from '@emailjs/browser';
 import { Button } from './Button';
 
@@ -25,7 +26,7 @@ export const Contact = () => {
       );
   };
   return (
-    <div className='w-full h-screen'>
+    <Element name='contact' className='w-full h-screen'>
       <div className='max-w-[1000px] h-full flex flex-col mx-auto justify-center items-center'>
         <form className='max-w-[350px] mx-2' ref={form} onSubmit={handleSubmit}>
           <h1 className='text-2xl text-center my-4 text-secondary'>
@@ -66,6 +67,6 @@ export const Contact = () => {
           />
         </form>
       </div>
-    </div>
+    </Element>
   );
 };

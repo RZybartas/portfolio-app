@@ -1,9 +1,4 @@
-export type ButtonProps = {
-  text?: string;
-  link?: string;
-  type?: 'button' | 'submit';
-  className?: string;
-};
+import { ButtonProps } from '../types/types';
 
 export const Button = ({ text, link, type, className }: ButtonProps) => {
   return (

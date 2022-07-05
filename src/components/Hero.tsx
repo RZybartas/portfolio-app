@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Element, Link } from 'react-scroll';
 
 const variants = {
   visible: { opacity: 1 },
@@ -7,7 +8,7 @@ const variants = {
 
 export const Hero = () => {
   return (
-    <div className=' h-screen w-full '>
+    <Element name='hero' className=' h-screen w-full '>
       {/* container */}
       <div className='max-w-[1000px] h-full mx-auto text-primary font-bold flex flex-col justify-center items-center '>
         <div className='text-5xl sm:text-7xl'>
@@ -54,10 +55,12 @@ export const Hero = () => {
             transition={{ duration: 1.5, delay: 3 }}
             className='text-secondary border border-secondary px-6 py-3 my-8 text-[20px] rounded-full hover:bg-secondary hover:text-dark'
           >
-            Contact me!
+            <Link to='contact' smooth={true} duration={500}>
+              Contact me!
+            </Link>
           </motion.button>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };

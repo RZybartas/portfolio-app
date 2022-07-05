@@ -1,8 +1,9 @@
+import { Element } from 'react-scroll';
 import about from '../assets/about-1.jpg';
 
 export const About = () => {
   return (
-    <div className='w-full h-screen '>
+    <Element name='about' className='w-full h-screen '>
       {/* Container */}
       <div className='max-w-[1000px] h-full flex flex-col  items-center justify-center text-primary mx-auto md:flex-row md:justify-around '>
         <p className='w-[330px] text-2xl mt-10 md:w-[450px] md:text-3xl'>
@@ -19,6 +20,6 @@ export const About = () => {
           />
         </div>
       </div>
-    </div>
+    </Element>
   );
 };

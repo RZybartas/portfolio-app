@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 import { useState } from 'react';
 import { HiMenuAlt1, HiOutlineX } from 'react-icons/hi';
 import { RiGithubFill, RiLinkedinFill } from 'react-icons/ri';
@@ -50,35 +51,45 @@ export const Navbar = () => {
           transition={{ type: 'tween' }}
           className='hover:text-secondary active:text-secondary text-2xl border-none'
         >
-          Home
+          <Link to='hero' smooth={true} duration={500}>
+            HOME
+          </Link>
         </motion.li>
         <motion.li
           variants={item}
           transition={{ type: 'tween' }}
           className='hover:text-secondary active:text-secondary text-2xl border-none'
         >
-          About
+          <Link to='about' smooth={true} duration={500}>
+            ABOUT
+          </Link>
         </motion.li>
         <motion.li
           variants={item}
           transition={{ type: 'tween' }}
           className='hover:text-secondary active:text-secondary text-2xl border-none'
         >
-          Skills
+          <Link to='skills' smooth={true} duration={500}>
+            SKILLS
+          </Link>
         </motion.li>
         <motion.li
           variants={item}
           transition={{ type: 'tween' }}
           className='hover:text-secondary active:text-secondary text-2xl border-none'
         >
-          Work
+          <Link to='work' smooth={true} duration={500}>
+            WORK
+          </Link>
         </motion.li>
         <motion.li
           variants={item}
           transition={{ type: 'tween' }}
           className='hover:text-secondary active:text-secondary text-2xl border-none'
         >
-          Contact
+          <Link to='contact' smooth={true} duration={500}>
+            CONTACT
+          </Link>
         </motion.li>
       </motion.ul>
       {/* Hamburger */}
@@ -122,13 +133,31 @@ export const Navbar = () => {
             : 'absolute top-0 left-0 w-full h-screen bg-dark flex flex-col justify-center items-center '
         }
       >
-        <li className='hover:text-secondary  text-4xl py-5'>Home</li>
-        <li className='hover:text-secondary text-4xl py-5'>About</li>
-        <li className='hover:text-secondary text-4xl py-5 outline-none'>
-          Skills
+        <li className='hover:text-secondary  text-4xl py-5'>
+          <Link onClick={handleClick} to='hero' smooth={true} duration={500}>
+            HOME
+          </Link>
         </li>
-        <li className='hover:text-secondary text-4xl py-5'>Work</li>
-        <li className='hover:text-secondary text-4xl py-5'>Contact</li>
+        <li className='hover:text-secondary text-4xl py-5'>
+          <Link onClick={handleClick} to='about' smooth={true} duration={500}>
+            ABOUT
+          </Link>
+        </li>
+        <li className='hover:text-secondary text-4xl py-5 outline-none'>
+          <Link onClick={handleClick} to='skills' smooth={true} duration={500}>
+            SKILLS
+          </Link>
+        </li>
+        <li className='hover:text-secondary text-4xl py-5'>
+          <Link onClick={handleClick} to='work' smooth={true} duration={500}>
+            WORK
+          </Link>
+        </li>
+        <li className='hover:text-secondary text-4xl py-5'>
+          <Link onClick={handleClick} to='contact' smooth={true} duration={500}>
+            CONTACT
+          </Link>
+        </li>
         <motion.div
           variants={item}
           transition={{ type: 'tween' }}
